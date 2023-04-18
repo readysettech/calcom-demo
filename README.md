@@ -75,6 +75,12 @@ $ cd cal.com
 $ yarn install
 ```
 
+After that, migrate the upstream database to match the current version of cal.com
+
+``` shellsession
+$ yarn workspace @calcom/prisma db-deploy
+```
+
 To configure Cal.com to point at your local database, first copy the
 `.env.example` file to `.env`:
 
