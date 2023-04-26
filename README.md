@@ -81,20 +81,6 @@ $ cd cal.com
 $ yarn install
 ```
 
-Edit the turbo config file to change linter settings:
-
-```shellsession
-$ vi apps/web/next.config.js
-
-Modify the file to change the following parameters in nextConfig:
-eslint:{
-    ignoreDuringBuilds:true
-  },
-  typescript:{
-    ignoreBuildErrors:true
- },
-```
-
 To configure Cal.com to point at your local database, first copy the
 `.env.example` file to `.env`:
 
