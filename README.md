@@ -35,6 +35,12 @@ manually in the `psql` flags of the commands that follow. You should also make
 sure to create the `postgres` user with the necessary permissions to create a
 new database.
 
+If you don't have Postgres or PgBench installed, install them:
+
+```shellsession
+sudo yum install -y postgresql15 postgresql15-contrib
+```
+
 First, create a database in your PostgreSQL server for Cal.com to use to store
 its data:
 
@@ -93,6 +99,8 @@ default database string of `calendso` and replacing it with `calcom`. It also
 likely includes changing the port in the connection string, as PostgreSQL
 typically defaults to listening on port 5432, whereas the example Cal.com
 config file uses port 5450.
+
+If you're deploying to the internet, you'll also need to set NEXTAUTH_URL to be the external ip and port.
 
 Now, to start the Cal.com dev server, run:
 
